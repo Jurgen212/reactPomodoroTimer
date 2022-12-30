@@ -1,0 +1,29 @@
+.principalContainer{
+    width: 100vw;
+    height: 100vh;
+    
+    overflow-x:hidden;
+    overflow-y:hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+
+    background-image: url("https://static.vecteezy.com/system/resources/previews/002/811/450/non_2x/city-background-and-wallpaper-vector.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+@media ( min-width: 900px ) {
+    
+    .principalContainer{
+        flex-direction: row;
+    }
+    
+}

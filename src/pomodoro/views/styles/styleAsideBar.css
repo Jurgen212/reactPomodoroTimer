@@ -1,0 +1,54 @@
+.asideContainer{
+    position: absolute;
+    width: 95vw;
+    height: 35vh;
+    border-radius: 5px;
+    bottom: 15px;
+    background-color: yellow;
+
+    padding: 20px;
+
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    flex-direction: row-reverse;
+
+    justify-content: space-around;
+}
+
+.title{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.iconButton{
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 20px;
+    border: 1px solid lightblue;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(100px);
+}
+
+@media ( min-width: 900px ) {
+    
+    .asideContainer{
+        
+       
+        position: relative;
+        margin-right: 20px;
+        height: 90%;
+        flex-basis: 30%;
+    }
+
+    .title{
+        font-size: 25px;
+    }
+}

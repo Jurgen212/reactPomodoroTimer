@@ -1,0 +1,14 @@
+.pomodoroContainer{
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+}
+
+
+@media ( min-width: 900px ) {
+    
+    .pomodoroContainer{
+        flex-basis: 70%;
+        height: 100vh;
+    }
+}
