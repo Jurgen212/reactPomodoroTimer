@@ -1,9 +1,10 @@
 import { initializeApp } from "firebase/app";
 
-import { getAuth }       from 'firebase/auth'
-import { getFirestore }  from 'firebase/firestore/lite'
-import { getAnalytics } from "firebase/analytics";
-
+import { getAuth }        from 'firebase/auth'
+import { getFirestore }   from 'firebase/firestore/lite'
+import { getAnalytics }   from "firebase/analytics";
+import { getDatabase, ref, set  }   from 'firebase/database'
+import { addTodoByUser } from "./providers";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDwkJCTohapZfLRnzieiEAgZN47Ou99oGE",
@@ -19,4 +20,5 @@ const firebaseConfig = {
 export const FirebaseApp  = initializeApp(firebaseConfig);
 export const FirebaseAuth = getAuth      ( FirebaseApp  );
 export const FirebaseDB   = getFirestore ( FirebaseApp  );
+export const FirebaseRTD  = getDatabase();
 const analytics = getAnalytics( FirebaseApp );
