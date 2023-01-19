@@ -12,11 +12,11 @@ export const OptionsContainer = ({ activateVisibilityUser, activateVisibilityOpt
             <span   className="material-icons">settings</span>
         </button>
 
-        <button className='iconButton btn btn-secondary'
+        {/* <button className='iconButton btn btn-secondary'
                 onClick={ activateVisibilityUser }>
 
             <span className="material-icons">account_circle</span>
-        </button>
+        </button> */}
     </div>
   )
 }
