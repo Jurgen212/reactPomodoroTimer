@@ -1,0 +1,36 @@
+.asideTitle{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.iconButton{
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 20px;
+    border: 1px solid lightblue;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(100px);
+}
+
+.asideHeaderContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+@media ( min-width: 900px ) {
+
+    .asideTitle{
+        font-size: 20px;
+    }
+}

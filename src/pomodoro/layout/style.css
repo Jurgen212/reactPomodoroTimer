@@ -19,11 +19,15 @@
 }
 
 
+.asideLayout{
+    height: 90%;
+    width: 100%;
+}
 
 @media ( min-width: 900px ) {
     
     .principalContainer{
         flex-direction: row;
     }
-    
 }
+

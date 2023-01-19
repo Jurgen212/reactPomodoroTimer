@@ -1,5 +1,3 @@
-
-
 import React, { useContext, useEffect, useState } from 'react'
 import { ClockContext } from '../../../context/ClockContext';
 
@@ -83,9 +81,11 @@ export const TimerClock = ({ corriendoTiempo }) => {
 
     //Al cargar el componente, que reciba los datos que el usuario puso en las configuraciones, los cargados en el contexto
     //Se ejecuta cuando empieza el componente o al cambiar los segundos
+
+    const dependencias = [ [], segundos ]
     useEffect(() => {
       iniciarDetenerTimer()
-    }, [[], segundos ])
+    }, dependencias)
 
 
     //Si esta corriendo el tiempo, entonces empieza el temporizador, de lo contrario se reestablecen los valores

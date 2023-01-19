@@ -1,7 +1,9 @@
 
 
 import { GoogleAuthProvider, TwitterAuthProvider, FacebookAuthProvider, GithubAuthProvider, signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
-import { FirebaseAuth } from './config';
+import { FirebaseAuth, FirebaseRTD } from './config';
+
+import { set, ref, get } from 'firebase/database';
 
 const googleProvider    = new GoogleAuthProvider();
 const twitterProvider   = new TwitterAuthProvider();
@@ -99,4 +101,22 @@ const signInWithProvider = async ( provider ) =>{
 
 export const logOutFirebase = async() =>{
     return await FirebaseAuth.signOut();
+}
+
+
+export const addTodoByUser = ( uid, data ) => {
+
+    
+    const reference = ref( FirebaseRTD, "users/" + uid + "/" );
+    set( reference, data );
+}
+
+
+export const getTodosByUser = async ( uid ) =>{
+
+    const distanceRef = ref( FirebaseRTD, "users/" + uid + "/");
+
+    const snapshot = await get( distanceRef );
+    const user = snapshot.val();
+    return user;
 }
